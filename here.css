@@ -1,0 +1,103 @@
+/* Navbar Styling */
+.navbar {
+    background-color: #0056b3; 
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.navbar-title {
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+/* Body Section Styling */
+body {
+    background-color: #e6f0ff; 
+    font-family:sans-serif;
+    color: #0056b3; 
+}
+
+.main-heading {
+    margin: 50px 0;
+    color: #008000; 
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.description {
+    color: #008000; 
+}
+
+/* Buttons Styling */
+.btn-custom {
+    background-color: #0056b3; 
+    color: #ffffff;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #003d80; /* Darker Blue */
+    color: #ffffff;
+}
+
+/* Modal Styling */
+.modal-content {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.modal-header {
+    background-color: #0056b3; /* Bright Blue */
+    color: #ffffff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0056b3; /* Bright Blue */
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* __________ */
+.quiz-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    background-color: #f0f2f5; /* Light background for a clean look */
+  }
+  
+  .quiz-card {
+    max-width: 400px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .quiz-title h2 {
+    font-weight: bold;
+  }
+  
+  .quiz-description p {
+    margin: 0;
+    padding: 0 10px;
+  }
+  
+ 
+  
