@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="here.css">
 
 </head>
-<body>
+<body id="dark">
     
 
     <!-- Navbar -->
@@ -21,6 +21,15 @@
             </a>
             <span class="navbar-title">Quiz Application</span>
         </div>
+        <div class="form-check form-switch ms-4 align-content-center m-0">
+            <input
+              onchange="darkmode()"
+              class="form-check-input fs-5 my-auto"
+              type="checkbox"
+              role="switch"
+              id="darkbtn"
+            />
+          </div>
     </nav>
 
     <!-- Body Section -->

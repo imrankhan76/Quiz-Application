@@ -1,52 +1,100 @@
-var userData = {}; 
+// darkmode toggle
+
+var button = document.getElementById("darkbtn");
+function darkmode() {
+  if (button.checked) {
+    localStorage.setItem("mode", "dark");
+  } else {
+    localStorage.setItem("mode", "white");
+  }
+  checkMode();
+}
+
+var element = document.getElementById("dark");
+var heading = document.getElementsByClassName("texting");
+
+function checkMode() {
+  var currentMode = localStorage.getItem("mode");
+  if (currentMode === "dark") {
+    button.checked = true;
+    element.className = "bg-black";
+
+    for (var i = 0; i < heading.length; i++) {
+      heading[i].classList.remove("text-dark-emphasis", "textColor");
+      heading[i].classList.add("text-white");
+    }
+  } else {
+    element.className = "bg-white";
+    for (var i = 0; i < heading.length; i++) {
+      heading[i].classList.remove("text-white");
+      heading[i].classList.add("textColor");
+    }
+  }
+}
+
+function setByDefault() {
+  var checkModeState = localStorage.getItem("mode");
+  if (checkModeState === null) {
+    checkMode();
+  } else {
+    checkMode();
+  }
+}
+window.onload = setByDefault();
+
 
 function signUP() {
-    var getName = document.getElementById("getName").value.trim();
-    var getEmail = document.getElementById("getEmail").value.trim();
-    var getPassword = document.getElementById("getPassword").value.trim();
+  const getName = document.getElementById("getName").value.trim();
+  const getEmail = document.getElementById("getEmail").value.trim();
+  const getPassword = document.getElementById("getPassword").value.trim();
 
-    if (getName === "") {
-        Swal.fire("Please Enter Your Name");
-        return;
-    }
-    if (getEmail === "") {
-        Swal.fire("Please Enter Your Valid Email");
-        return;
-    }
-    if (getPassword === "") {
-        Swal.fire("Please Enter Your Password");
-        return;
-    }
+  if (getName === "") {
+      Swal.fire("Please Enter Your Name");
+      return;
+  }
+  if (getEmail === "") {
+      Swal.fire("Please Enter Your Valid Email");
+      return;
+  }
+  if (getPassword === "") {
+      Swal.fire("Please Enter Your Password");
+      return;
+  }
 
-    userData = {
-        name: getName,
-        email: getEmail.toLowerCase(),
-        password: getPassword,
-    };
+  // Save data in local storage
+  const userData = {
+      name: getName,
+      email: getEmail.toLowerCase(),
+      password: getPassword,
+  };
+  localStorage.setItem("userData", JSON.stringify(userData));
 
-    Swal.fire("Sign-Up Successful!");
+  Swal.fire("Sign-Up Successful!");
 
-    document.getElementById("getName").value = "";
-    document.getElementById("getEmail").value = "";
-    document.getElementById("getPassword").value = "";
+  document.getElementById("getName").value = "";
+  document.getElementById("getEmail").value = "";
+  document.getElementById("getPassword").value = "";
 }
 
 function logIn() {
-    const email = document.getElementById("email").value.trim().toLowerCase();
-    const password = document.getElementById("password").value.trim();
+  const email = document.getElementById("email").value.trim().toLowerCase();
+  const password = document.getElementById("password").value.trim();
 
-    if (!userData.email) {
-        Swal.fire("No user found. Please sign up first.");
-        return;
-    }
+  // Retrieve data from local storage
+  const storedData = localStorage.getItem("userData");
+  if (!storedData) {
+      Swal.fire("No user found. Please sign up first.");
+      return;
+  }
 
-    if (email === userData.email && password === userData.password) {
-        
-            window.location.href = "second.html"; 
-        }
-     else {
-        Swal.fire("Invalid Email or Password");
-    }
+  const userData = JSON.parse(storedData);
+
+  if (email === userData.email && password === userData.password) {
+      Swal.fire("Login Successful!");
+      window.location.href = "second.html"; 
+  } else {
+      Swal.fire("Invalid Email or Password");
+  }
 }
 
 // start quiz

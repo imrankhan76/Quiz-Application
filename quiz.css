@@ -1,66 +1,65 @@
 
 
-        #quizWindow,
-        #resultWindow {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            color: black;
-        }
+#quizWindow,
+#resultWindow {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: black;
+}
 
-        #quizWindow {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+#quizWindow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        h4 {
-            font-weight: 700;
-            text-align: center;
-        }
+h4 {
+    font-weight: 700;
+    text-align: center;
+}
 
-        .list-group-item {
-            border: none;
-            background: transparent;
-        }
+.list-group-item {
+    border: none;
+    background: transparent;
+}
 
-        .list-group-item input {
-            accent-color: #2575fc;
-        }
+.list-group-item input {
+    accent-color: #2575fc;
+}
 
-        .btn-primary {
-            background-color: #6a11cb;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            transition: all 0.3s;
-        }
+.btn-primary {
+    background-color: #6a11cb;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
 
-        .btn-primary:hover {
-            background-color: #2575fc;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-        }
+.btn-primary:hover {
+    background-color: #2575fc;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
 
-        #resultWindow {
-            display: none;
-            text-align: center;
-        }
+#resultWindow {
+    display: none;
+    text-align: center;
+}
 
-        .greenText {
-            color: green;
-            font-size: 1.5rem;
-        }
+.greenText {
+    color: green;
+    font-size: 1.5rem;
+}
 
-        .redText {
-            color: red;
-            font-size: 1.5rem;
-        }
+.redText {
+    color: red;
+    font-size: 1.5rem;
+}
 
-        .table {
-            color: black;
-        }
+.table {
+    color: black;
+}
 
-       
-    
+
